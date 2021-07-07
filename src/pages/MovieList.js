@@ -10,12 +10,27 @@ class MovieList extends Component {
     this.state = {
       movies: [],
     };
+
+    this.fetchMovie = this.fetchMovie.bind(this);
+  }
+
+  componentDidMount() {
+    this.fetchMovie();
+  }
+
+  async fetchMovie() {
+    const movies = await movieAPI.getMovies();
+    this.setState({ movies });
   }
 
   render() {
     const { movies } = this.state;
 
-    // Render Loading here if the request is still happening
+    if (movies.length === 0) {
+      return (
+        <div>Carregando...</div>
+      );
+    }
 
     return (
       <div data-testid="movie-list">
