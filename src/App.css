@@ -64,3 +64,49 @@ h2 {
   color: black;
   font-size: 20px;
 }
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 2% auto;
+  background-color: lightgrey;
+}
+
+.details-card p {
+  font-size: 25px;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.edit-btn {
+  background-color: green;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: black 5px 2px 1px;
+  margin: 10px;
+}
+
+.return-btn {
+  background-color: green;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: rgb(83, 79, 79) 5px 2px 1px;
+  margin: 10px;
+  box-shadow: black 5px 2px 1px;
+}
