@@ -14,6 +14,7 @@ class MovieDetails extends Component {
     };
 
     this.fetchMovie = this.fetchMovie.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   componentDidMount() {
@@ -33,6 +34,11 @@ class MovieDetails extends Component {
     }
   }
 
+  delete() {
+    const { movie } = this.state;
+    movieAPI.deleteMovie(movie.id);
+  }
+
   render() {
     const { movie, showLoading } = this.state;
     const { title, storyline, imagePath, genre, rating, subtitle, id } = movie;
@@ -50,6 +56,7 @@ class MovieDetails extends Component {
         <div className="buttons-container">
           <Link className="edit-btn" to={ `/movies/${id}/edit` }>EDITAR</Link>
           <Link className="return-btn" to="/">VOLTAR</Link>
+          <Link className="delete-btn" to="/" onClick={ this.delete }>DELETAR</Link>
         </div>
       </div>
     );
