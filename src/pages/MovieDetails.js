@@ -5,43 +5,43 @@ import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
 
 class MovieDetails extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showLoading: true,
       movie: {},
     };
+
+    this.fetchMovie = this.fetchMovie.bind(this);
   }
 
   componentDidMount() {
-    this.fetchMovie();
+    const { match: { params: { id } } } = this.props;
+    this.fetchMovie(id);
   }
 
-  async fetchMovie() {
-    const { match: { params: { id } } } = this.props;
-    const movie = await movieAPI.getMovie(id);
-    this.setState({
-      movie,
-      showLoading: false,
-    });
+  async fetchMovie(id) {
+    try {
+      const movie = await movieAPI.getMovie(id);
+      this.setState({
+        movie,
+        showLoading: false,
+      });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
     const { movie, showLoading } = this.state;
-
-    if (showLoading) {
-      return (
-        <Loading />
-      );
-    }
     const { title, storyline, imagePath, genre, rating, subtitle, id } = movie;
+
+    if (showLoading) return <Loading />;
 
     return (
       <div className="details-card" data-testid="movie-details">
-        <h1>
-          { title }
-        </h1>
+        <p>{ `Title: ${title}` }</p>
         <img alt="Movie Cover" src={ `../${imagePath}` } />
         <p>{ `Subtitle: ${subtitle}` }</p>
         <p>{ `Storyline: ${storyline}` }</p>
@@ -60,7 +60,7 @@ MovieDetails.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string.isRequired,
-    }).isRequired,
+    }),
   }).isRequired,
 };
 

@@ -6,6 +6,14 @@ class MovieForm extends React.Component {
     super(props);
     this.state = { ...props.movie };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateMovie = this.updateMovie.bind(this);
+    this.renderTitleInput = this.renderTitleInput.bind(this);
+    this.renderSubtitleInput = this.renderSubtitleInput.bind(this);
+    this.renderImagePathInput = this.renderImagePathInput.bind(this);
+    this.renderStorylineInput = this.renderStorylineInput.bind(this);
+    this.renderGenreSelection = this.renderGenreSelection.bind(this);
+    this.renderRatingInput = this.renderRatingInput.bind(this);
+    this.renderSubmitButton = this.renderSubmitButton.bind(this);
   }
 
   handleSubmit() {
@@ -164,15 +172,26 @@ class MovieForm extends React.Component {
   }
 }
 
+MovieForm.defaultProps = {
+  movie: {
+    title: '',
+    subtitle: '',
+    imagePath: '',
+    storyline: '',
+    genre: '',
+    rating: 0,
+  },
+};
+
 MovieForm.propTypes = {
   movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired,
-    storyline: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-  }).isRequired,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    imagePath: PropTypes.string,
+    storyline: PropTypes.string,
+    genre: PropTypes.string,
+    rating: PropTypes.number,
+  }),
   onSubmit: PropTypes.func.isRequired,
 };
 
