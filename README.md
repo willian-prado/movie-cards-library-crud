@@ -1,6 +1,9 @@
 ## Projeto Movie Cards Library CRUD
 
-Terceiro projeto do módulo de Front-end do curso de desenvolvimento web da Trybe. \
+> Terceiro projeto do módulo de Front-end do curso de desenvolvimento web da Trybe.
+
+**Contexto**
+
 Esse trabalho finaliza os três blocos iniciais que nos forneceram as bases em React, desta vez utilizamos os conceitos de ciclo de vida de 
 componentes e roteamento de páginas usando a biblioteca React Router.
 
@@ -26,9 +29,17 @@ Dando continuidade aos dois últimos projetos (Movie Cards Library e Movie Cards
 - Estruturar e organizar as rotas da sua aplicação com o componente Switch ;
 - Usar o componente Redirect pra alternar entre rotas.
 
+**Tecnologias utilizadas**
+
+- <a href="https://www.w3.org/html/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" title="HTML5" align="center" height="35"/> - HTML</a> 
+- <a href="https://www.w3schools.com/css/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" title="CCS3" align="center" height="35"/> - CSS</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" title="JavaScript" align="center" height="30"/> - JavaScript</a>
+- <a href="https://reactjs.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" title="React" align="center" height="35"/> - React</a>
+- <a href="https://reactrouter.com/docs/en/v6/getting-started/overview"><img src="https://reacttraining.com/images/blog/reach-react-router-future.png" title="React Router" align="center" height="30"/> - React Router</a>
+
 ---
 
-### Lista de requisitos propostos:
+### Lista de requisitos propostos pela Trybe:
 
 #### Obrigatórios
 
