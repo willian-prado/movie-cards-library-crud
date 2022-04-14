@@ -9,7 +9,7 @@ componentes e roteamento de páginas usando a biblioteca React Router.
 
 **Objetivo do projeto**
 
-Dando continuidade aos dois últimos projetos (Movie Cards Library e Movie Cards Library Stateful), desta vez a ideia é criar um **CRUD** para a biblioteca de cards de filmes. A sigla **CRUD** significa, _Create, Read, Update and Delete_, portanto, as seguintes funcionalidades devem ser implementadas:
+Construir um **CRUD** para a biblioteca de cards de filmes. A sigla **CRUD** significa, _Create, Read, Update and Delete_, portanto, as seguintes funcionalidades devem ser implementadas:
 
   - Possibilidade de adicionar um novo filme à lista - **CREATE**;
   - Listar todos os filmes cadastrados, com uma página de informações resumidas sobre cada filme e uma página de informações detalhadas de um filme selecionado - **READ**;
