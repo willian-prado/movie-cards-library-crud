@@ -1,6 +1,6 @@
 ## Projeto Movie Cards Library CRUD
 
-> Terceiro projeto do módulo de Front-end do curso de desenvolvimento web da Trybe.
+> Terceiro projeto do módulo de Front-end do curso de desenvolvimento web da [Trybe](https://www.betrybe.com/)
 
 **Contexto**
 
@@ -16,7 +16,7 @@ Construir um **CRUD** para a biblioteca de cards de filmes. A sigla **CRUD** sig
   - Opção de editar um filme da lista - **UPDATE**;
   - Opção de apagar um filme da lista - **DELETE**;
 
-**Principais habilidades desenvolvidas nesse trabalho:**
+**Principais habilidades desenvolvidas nesse trabalho**
 
 - Utilizar o componentDidMount para executar uma ação após o componente ser inserido no DOM;
 - Utilizar o shouldComponentUpdate para avaliar se uma atualização do componente deve ou não acontecer naquele momento;
@@ -109,3 +109,8 @@ Na rota `/movies/new`, utilizando a callback passada para `MovieForm`, `NewMovie
 **7 - Adicione um link para deletar um cartão em `MovieDetails`**
 
 Ao clicar neste link, faça uma requisição utilizando a função `deleteMovie` do módulo `movieAPI`. Após finalizar a requisição, redirecione o app para a página inicial. O cartão apagado não deverá mais se encontrar na lista.
+
+---
+
+[Ir para a lista de projetos](https://github.com/willian-prado/trybe-records)
+
